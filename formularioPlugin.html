@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.mask.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00', { reverse: true });
+            $('#date').mask('00/00/0000');
+            $('#phone').mask('0000-0000');
+            $('#cep').mask('00000-000');
+            $('#money').mask('000.000.000.000.000,00', { reverse: true });
+        })
+
+    </script>
+</head>
+
+<style>
+    html {
+        color: #A68F97;
+    }
+    #tudo {
+        margin: auto;
+        border: solid #4B4952 2px;
+        background-color: #0B1726;
+        padding: 30px;
+        border-radius: 20px;
+        width: 40vw;
+        font-size: larger;
+        height: 90vh;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+
+<body>
+    <div id="tudo">
+        <h1 class="subtitle is-1"> Formulario usando jQuery
+        </h1>
+        <label for="cpf">Digite seu cpf</label>
+        <div class="control">
+            <input id="cpf" class="input is-focused" type="text" placeholder="EX:000.000.0000-00" />
+        </div>
+        <br>
+        <label for="data">Digite sua data de nascimento</label>
+        <div class="control">
+            <input id="data" class="input is-focused" type="text" placeholder="00/00/0000" />
+        </div>
+        <br>
+        <label for="phone">Digite seu telefone</label>
+        <div class="control">
+            <input id="phone" class="input is-focused" type="text" placeholder="EX:(00)0000000-0000" />
+        </div>
+        <br>
+        <label for="money">Digite sua renda mensal</label>
+        <div class="control">
+            <input id="money " class="input is-focused" type="text" placeholder="00000,00" />
+        </div>
+
+    </div>
+</body>
+
+</html>
